@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  --ink:          #0a0d13;
+  --slate-dark:   #111520;
+  --slate-mid:    #1a2035;
+  --slate-light:  #263050;
+  --grey:         #8a94a6;
+  --grey-light:   #b8c2d0;
+  --white:        #eef1f6;
+  --blue:         #3b82f6;
+  --blue-bright:  #60a5fa;
+  --blue-dim:     #1e3a8a;
+  --silver:       #94a3b8;
+  --gold:         #f59e0b;
+
+  /* Board */
+  --sq-light:     #c9d8e8;
+  --sq-dark:      #2d4a6e;
+  --sq-hover:     rgba(96, 165, 250, 0.35);
+  --sq-nav:       rgba(245, 158, 11, 0.25);
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --ease:         cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+::selection { background: var(--blue); color: var(--ink); }

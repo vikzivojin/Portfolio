@@ -1,0 +1,199 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+}
+
+.splash--leaving {
+  opacity: 0;
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+/* ── Animated board background ─────────────────────── */
+.splash__board-bg {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  transform: rotate(0deg);
+}
+
+.splash__sq {
+  opacity: 0;
+  animation: sqReveal 0.5s ease forwards;
+}
+
+.splash__sq--light { background: rgba(201, 216, 232, 0.12); }
+.splash__sq--dark  { background: rgba(45, 74, 110, 0.25); }
+
+@keyframes sqReveal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Vignette ──────────────────────────────────────── */
+.splash__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 65% at 50% 50%,
+    rgba(10, 13, 19, 0.92) 0%,
+    rgba(10, 13, 19, 0.55) 65%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ── Content ───────────────────────────────────────── */
+.splash__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: splashContentIn 0.9s var(--ease) 0.3s both;
+}
+
+@keyframes splashContentIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.splash__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: var(--blue-bright);
+  margin-bottom: 20px;
+}
+
+.splash__king-icon {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: var(--blue-bright);
+  filter: drop-shadow(0 0 12px rgba(96, 165, 250, 0.5));
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.splash__name {
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 10vw, 8rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.splash__name-accent {
+  color: var(--blue-bright);
+}
+
+/* ── Divider ───────────────────────────────────────── */
+.splash__divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.splash__divider-line {
+  display: block;
+  width: 56px;
+  height: 1px;
+  background: var(--slate-light);
+}
+
+.splash__divider-diamond {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--blue);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+.splash__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  color: var(--grey-light);
+  text-transform: uppercase;
+  margin-bottom: 44px;
+}
+
+/* ── Button ────────────────────────────────────────── */
+.splash__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blue);
+  color: var(--ink);
+  border: none;
+  cursor: pointer;
+  padding: 14px 40px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, transform 0.25s ease;
+  margin-bottom: 14px;
+}
+
+.splash__btn:hover {
+  background: var(--blue-bright);
+  transform: translateY(-2px);
+}
+
+.splash__btn svg { transition: transform 0.25s ease; }
+.splash__btn:hover svg { transform: translateX(4px); }
+
+.splash__hint {
+  font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(138, 148, 166, 0.45);
+}
+
+/* ── Corner accents ────────────────────────────────── */
+.splash__corner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+.splash__corner--tl {
+  top: 28px; left: 28px;
+  border-top: 1px solid rgba(59, 130, 246, 0.3);
+  border-left: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.splash__corner--br {
+  bottom: 28px; right: 28px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  border-right: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 480px) {
+  .splash__corner { width: 50px; height: 50px; }
+}
