@@ -11,12 +11,12 @@ const projects = [
     live: 'https://zaytun1.netlify.app/',
   },
   {
-    piece: '♞', num: '02',
-    title: 'Collatz Loops',
-    tags: ['JavaScript', 'Math', 'Visualisation'],
-    desc: 'A mathematical exploration site diving into the Collatz conjecture — one of the most famous unsolved problems in mathematics. Visualises the sequences and loop structures.',
+    piece: '♔', num: '02',
+    title: 'Collatz Survivor',
+    tags: ['React', 'JavaScript', 'Math', 'Automation', 'Visualisation'],
+    desc: 'I created a game around the Collatz Conjecture, where one has limited opportunities to "cheat" the algorithm. Give it a try!',
     status: 'Live',
-    live: 'https://collatzloops.com',
+    live: 'https://collatzsurvivor.com',
   },
   {
     piece: '♝', num: '03',
@@ -33,6 +33,14 @@ const projects = [
     desc: 'I created my personal website using React. I applied some logic in design of the chess board, and design principles in making an appealing website',
     status: 'In Production',
     live: '/',
+  },
+  {
+    piece: '♞', num: '05',
+    title: 'Collatz Loops',
+    tags: ['JavaScript', 'Math', 'Visualisation'],
+    desc: 'A mathematical exploration site diving into the Collatz conjecture — one of the most famous unsolved problems in mathematics. Visualises the sequences and loop structures.',
+    status: 'Live',
+    live: 'https://collatzloops.com',
   },
 ];
 
