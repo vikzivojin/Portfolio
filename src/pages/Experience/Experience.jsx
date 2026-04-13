@@ -3,18 +3,28 @@ import './Experience.css';
 
 const jobs = [
   {
-    id: 1, current: true,
-    company: 'HUB International',
-    role: 'Consultant, Benefits Specialist',
-    period: 'Jan 2022 – Present',
+    id: 1, current: false,
+    company: 'Mercer',
+    role: 'Principal Consultant, Health & Benefits',
+    period: 'Dec 2024 – Jul 2025',
     bullets: [
-      'Manage complex group benefits clients through full plan lifecycle: carrier negotiations, plan design, and employee communications.',
-      'Handle union negotiations, traditional-to-flex plan conversions, financial arrangement changes, and in-depth LTD analysis.',
-      'Built Power BI dashboards delivering live benefit and drug-spend insights — replacing manual quarterly reporting cycles.',
+      'Managed a collection of complex international clients, involving regular communication and presentations with client stakeholders.',
+      'Ensured seamless management and a complete understanding of each client\'s benefit plans.',
     ],
   },
   {
     id: 2,
+    company: 'HUB International',
+    role: 'Consultant, Benefits Specialist',
+    period: 'Jan 2022 – Dec 2024',
+    bullets: [
+      'Managed complex group benefits clients through full plan lifecycle: carrier negotiations, plan design, and employee communications.',
+      'Handled union negotiations, traditional-to-flex plan conversions, financial arrangement changes, and in-depth LTD analysis.',
+      'Built Power BI dashboards delivering live benefit and drug-spend insights — replacing manual quarterly reporting cycles.',
+    ],
+  },
+  {
+    id: 3,
     company: 'The Leslie Group',
     role: 'Senior Employee Benefits Specialist',
     period: 'Apr 2021 – Jan 2022',
@@ -24,7 +34,7 @@ const jobs = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: 'Wellington Altus Private Wealth',
     role: 'Benefits Analyst',
     period: 'Dec 2017 – Mar 2021',
@@ -34,7 +44,7 @@ const jobs = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     company: 'Aon Hewitt',
     role: 'Actuarial Analyst — Health & Benefits',
     period: 'Nov 2014 – Jun 2017',
